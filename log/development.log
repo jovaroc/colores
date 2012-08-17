@@ -1,0 +1,8 @@
+
+
+Started GET "/colores.html" for 192.168.0.190 at 2012-08-17 16:43:23 +0100
+
+ActionController::RoutingError (No route matches "/colores.html"):
+  
+
+Rendered i:/prog/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
