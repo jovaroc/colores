@@ -1,4 +1,12 @@
 Colores::Application.routes.draw do
+  get "wscolores/leer3"
+
+  get "wscolores/crear"
+
+  get "wscolores/colordia"
+
+  resources :colors
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

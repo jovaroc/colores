@@ -1,0 +1,2 @@
+module WscoloresHelper
+end
