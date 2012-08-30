@@ -5,6 +5,8 @@ Colores::Application.routes.draw do
 
   get "wscolores/colordia"
 
+  match "wscolores/color/:id" => "wscolores#color"
+
   resources :colors
 
   # The priority is based upon order of creation:

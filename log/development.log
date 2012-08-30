@@ -2056,3 +2056,149 @@ Started GET "/wscolores/colordia" for 127.0.0.1 at 2012-08-30 14:43:39 +0100
   Processing by WscoloresController#colordia as */*
   [1m[36mColor Load (0.0ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", 2]]
 Completed 200 OK in 17ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wscolores/colordia" for 127.0.0.1 at 2012-08-30 19:53:59 +0100
+  Processing by WscoloresController#colordia as */*
+  [1m[36mColor Load (18.8ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 326ms (Views: 1.1ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/stylesheets/iPhone_prueba.css" for 127.0.0.1 at 2012-08-30 20:00:57 +0100
+
+ArgumentError (missing :controller):
+  config/routes.rb:8:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/wscolores/color/2" for 127.0.0.1 at 2012-08-30 20:01:03 +0100
+
+ActionController::RoutingError (No route matches [GET] "/wscolores/color/2"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/stylesheets/iPhone_prueba.css" for 127.0.0.1 at 2012-08-30 20:08:02 +0100
+
+NameError (undefined local variable or method `wscolores' for #<ActionDispatch::Routing::Mapper:0x0000000417d000>):
+  config/routes.rb:8:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.4ms)
+
+
+Started GET "/wscolores/color/2" for 127.0.0.1 at 2012-08-30 20:08:05 +0100
+
+ActionController::RoutingError (No route matches [GET] "/wscolores/color/2"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/wscolores/color/2" for 127.0.0.1 at 2012-08-30 20:08:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/wscolores/color/2"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/wscolores/color/2" for 127.0.0.1 at 2012-08-30 20:08:40 +0100
+
+ActionController::RoutingError (No route matches [GET] "/wscolores/color/2"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/wscolores/color/2" for 127.0.0.1 at 2012-08-30 20:08:45 +0100
+
+ActionController::RoutingError (No route matches [GET] "/wscolores/color/2"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/iPhone_prueba.css" for 127.0.0.1 at 2012-08-30 20:08:48 +0100
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/iPhone_prueba.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/wscolores/color/1" for 127.0.0.1 at 2012-08-30 20:08:50 +0100
+
+ActionController::RoutingError (No route matches [GET] "/wscolores/color/1"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/iPhone_prueba.css" for 127.0.0.1 at 2012-08-30 20:11:29 +0100
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/iPhone_prueba.css"):
+  
+
+Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.4ms)
+
+
+Started GET "/wscolores/color/1" for 127.0.0.1 at 2012-08-30 20:11:33 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 165ms (Views: 0.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/colors" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+  Processing by ColorsController#index as HTML
+  [1m[35mColor Load (0.1ms)[0m  SELECT "colors".* FROM "colors" 
+Rendered colors/index.html.erb within layouts/application (12.6ms)
+Compiled application.css  (1ms)  (pid 4098)
+Compiled application.js  (4ms)  (pid 4098)
+Compiled jquery.js  (38ms)  (pid 4098)
+Compiled jquery_ujs.js  (110ms)  (pid 4098)
+Completed 200 OK in 270ms (Views: 267.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/colors.css?body=1" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+Served asset /colors.css - 200 OK (4ms)
+
+
+Started GET "/assets/wscolores.css?body=1" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+Served asset /wscolores.css - 200 OK (2ms)
+
+
+Started GET "/assets/colors.js?body=1" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+Served asset /colors.js - 200 OK (2ms)
+
+
+Started GET "/assets/wscolores.js?body=1" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+Served asset /wscolores.js - 200 OK (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+Served asset /application.js - 200 OK (10ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-08-30 20:13:51 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)

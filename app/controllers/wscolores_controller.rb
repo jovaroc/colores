@@ -11,10 +11,17 @@ class WscoloresController < ApplicationController
   end
 
   def colordia
-    @colores = Color.find(2)
+    unColor(2)
+  end
+  
+  def color
+    unColor(params[:id])
+  end
+
+  def unColor(nColor)
+        @colores = Color.find(nColor)
       respond_to do |format|
         format.xml  { render :xml => @colores.to_xml(:only => [:id, :nombre, :descripcion] ) }
       end
   end
-
 end
