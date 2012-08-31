@@ -3,7 +3,7 @@ class WscoloresController < ApplicationController
     @colores = Color.all
     
     respond_to do |format|
-      format.xml  { render :xml => @colores.to_xml(:only => [:id, :nombre, :descripcion] ) }
+      format.xml  { render :xml => @colores.to_xml(:only => [:id, :nombre, :referencia, :descripcion] ) }
     end
   end
 
@@ -21,7 +21,7 @@ class WscoloresController < ApplicationController
   def unColor(nColor)
         @colores = Color.find(nColor)
       respond_to do |format|
-        format.xml  { render :xml => @colores.to_xml(:only => [:id, :nombre, :descripcion] ) }
+        format.xml  { render :xml => @colores.to_xml(:only => [:id, :nombre, :referencia, :descripcion] ) }
       end
   end
 end

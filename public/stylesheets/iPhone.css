@@ -65,7 +65,7 @@ body {
 			color-stop(0.1, rgba(255,255,255,.4)),
 			color-stop(1, rgba(255,255,255,.1)),
 			-webkit-gradient(linear, left top, left bottom,
-				from(transparent), to(rgba(0,0,64,.05)) );
+				from(transparent), to(rgba(0,0,64,.05)) ));
 	background-repeat: no-repeat;
 	background-position: top left, bottom left;
 	-webkit-background-size: 100% 14px, 100%;

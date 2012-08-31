@@ -9,7 +9,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-		<link rel="stylesheet" type="text/css" href="stylesheets/iPhone_prueba.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/iPhone.css" />
 
 		<title>wscolores</title>
 		
@@ -18,30 +18,38 @@
 
 	<body>
 	<script>
-		function init() {
+		function verColor(id) {
 			
 		var ajax = new XMLHttpRequest();
 		ajax.onreadystatechange = ajaxHandler;
-		ajax.open("GET", "wscolores/color/1");
+		ajax.open("GET", "wscolores/color/" + id);
 		ajax.send();
 		}
 		function ajaxHandler(){
-			if (this.readyState == this.DONE && this.status == 200) {
-				document.getElementById("contenido").innerHTML = this.responseText;
-			}
+			if (!(this.readyState == this.DONE && this.status == 200)) {
+				return;
+				}
+			var input = this.responseXML.documentElement;
+			//var color = input.querySelectorAll("color");
+			document.getElementById("color_nombre").innerHTML = input.querySelector("nombre").textContent;
+			document.getElementById("color_color").style.background = '#' + input.querySelector("referencia").textContent;
+			document.getElementById("color_descripcion").innerHTML = input.querySelector("descripcion").textContent;
 		}
 	</script>
-    		
-		
+    				
 			<div class="header_wrapper">
-				<button class="header-button" onclick="init()">Leer3</button>
+				<button class="header-button" onclick="verColor(1);">Leer 1</button>
+				<button class="header-button" onclick="verColor(2);">Leer 2</button>
 			</div>
 		
 			<div class="group-wrapper">
-				<h2>Lista de colores</h2>
-				<textarea id="contenido">
-					
-				</textarea>
+				<h2>Color</h2>
+				<div id="color">
+				<div id="color_nombre">	</div>
+				<div id="color_color"  style="width: 30px; height: 30px; background: #000;">&nbsp;</div>
+				<div id="color_descripcion"> </div>
+				<div id="color_combina" width="10" height="10"> </div>
+				</div>
 				
 			</div>	
 			
