@@ -3593,3 +3593,31 @@ Started GET "/wscolores/color/1" for 192.168.1.36 at 2012-09-04 20:37:52 +0100
   Parameters: {"id"=>"1"}
   [1m[35mColor Load (0.1ms)[0m  SELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1  [["id", "1"]]
 Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/wscolores/color/1" for 192.168.1.36 at 2012-09-04 20:38:31 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/wscolores/color/1" for 192.168.1.36 at 2012-09-04 20:38:33 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mColor Load (0.2ms)[0m  SELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/wscolores/color/2" for 192.168.1.36 at 2012-09-04 20:38:35 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/wscolores/color/1" for 192.168.1.36 at 2012-09-04 20:38:36 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mColor Load (0.1ms)[0m  SELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 48ms (Views: 0.8ms | ActiveRecord: 1.7ms)
