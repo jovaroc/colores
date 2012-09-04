@@ -9,7 +9,7 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-		<link rel="stylesheet" type="text/css" href="stylesheets/iPhone.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/iPhone_JVR.css" />
 
 		<title>wscolores</title>
 		
@@ -21,8 +21,15 @@
 		function verColor(id) {
 			
 		var ajax = new XMLHttpRequest();
-		ajax.onreadystatechange = ajaxHandler;
+		ajax.onreadystatechange = ajaxHandlerJSON;
 		ajax.open("GET", "wscolores/color/" + id);
+		ajax.send();
+		}
+		function testJSON(id) {
+			
+		var ajax = new XMLHttpRequest();
+		ajax.onreadystatechange = ajaxHandlerJSON;
+		ajax.open("GET", "wscolores/leer3");
 		ajax.send();
 		}
 		function ajaxHandler(){
@@ -30,16 +37,29 @@
 				return;
 				}
 			var input = this.responseXML.documentElement;
-			//var color = input.querySelectorAll("color");
+			
 			document.getElementById("color_nombre").innerHTML = input.querySelector("nombre").textContent;
 			document.getElementById("color_color").style.background = '#' + input.querySelector("referencia").textContent;
 			document.getElementById("color_descripcion").innerHTML = input.querySelector("descripcion").textContent;
 		}
+		function ajaxHandlerJSON(){
+			if (!(this.readyState == this.DONE && this.status == 200)) {
+				return;
+				}
+			var input = eval("(" + this.responseText + ")");
+			
+			
+			document.getElementById("color_nombre").innerHTML = input.nombre;
+			document.getElementById("color_color").style.background = '#' + input.referencia;
+			document.getElementById("color_descripcion").innerHTML = input.descripcion;
+		}
 	</script>
     				
 			<div class="header_wrapper">
+				
+				
 				<button class="header-button" onclick="verColor(1);">Leer 1</button>
-				<button class="header-button" onclick="verColor(2);">Leer 2</button>
+				<button class="header-button.left" onclick="verColor(2);">Leer 2</button>
 			</div>
 		
 			<div class="group-wrapper">

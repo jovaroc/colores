@@ -4,7 +4,7 @@ body {
     background-color: #c5ccd3;
     background-image:
     	-webkit-gradient(linear, left top, right top, 
-    		color-stop(.75, transparent), 
+    	relative	color-stop(.75, transparent), 
     		color-stop(.75, rgba(255,255,255,.1)));
 	-webkit-background-size: 7px;
     font-family: Helvetica;
@@ -21,10 +21,11 @@ body {
 }
 
 .header_wrapper {
-	height: 60px;
+	height: 44px;
 	font-weight:bold;
 	text-shadow: rgba(0,0,0,0.7) 0 -1px 0;
 	color: #fff;
+	background-color: #8195af;
 	background-image:
 			-webkit-gracient(linear, left top, left bottom,
 				from(rgba(255,255,255,.05))),
@@ -43,11 +44,21 @@ body {
 	margin:0;
 }
 .header-button {
-	position: relative;
+	position: absolute;
+	top: 7px;
+	right: 6px;
 	width: auto;
-	min-width: 50px;
-	margin: 0 0 0 11px;
-	padding: 0px;
+	height: 29px;
+	min-width: 44px;
+	margin: 0;
+	padding: 0 10px;
+	
+	-webkit-border-radius: 5px;
+	border: solid 1px rgba(0,0,0,.25);
+	border-top-color: rgba(0,0,0,.6);
+	-webkit-box-sizing: border-box;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.3);
+	
 	font-family:inherit;
 	font-size: 12px;
 	font-weight: bold;
@@ -58,18 +69,23 @@ body {
 	color: #fff;
 	border:none;
 	
-	background-color: rgba(0,0,0,0);
+	background-color: rgba(0,0,0,.3);
 	background-image: 
 			-webkit-gradient(linear, left top, left bottom, 
 			color-stop(0,rgba(255,255,255,0.25)),
 			color-stop(0.1, rgba(255,255,255,.4)),
 			color-stop(1, rgba(255,255,255,.1))),
 			-webkit-gradient(linear, left top, left bottom,
-				from(transparent), to(rgba(0,0,64,.05)) );
+				from(transparent), to(rgba(0,0,64,.05))) ;
 	background-repeat: no-repeat;
 	background-position: top left, bottom left;
 	-webkit-background-size: 100% 14px, 100%;
 }
+
+.header-wrapper .header-button.left {
+	let: 6px; right: auto;
+}
+
 .group-wrapper {
 	margin: 9px;
 }
