@@ -16,7 +16,7 @@
 		
 	</head>
 
-	<body>
+	<body onload="verColor(1);">
 	<script>
 		function verColor(id) {
 			
@@ -48,22 +48,30 @@
 				}
 			var input = eval("(" + this.responseText + ")");
 			
-			
+			//document.getElementById("color_nombre").innerHTML = this.responseText;
 			document.getElementById("color_nombre").innerHTML = input.nombre;
 			document.getElementById("color_color").style.background = '#' + input.referencia;
 			document.getElementById("color_descripcion").innerHTML = input.descripcion;
+			var enlaces = '';
+			var colores = input.combinacon;
+			for (var i = 0; i < colores.length; i++) {
+				enlaces += '<a href="#" onclick="verColor(' + colores[i].color2 + ');" >' 
+				enlaces += colores[i].color2+'</a><br />';
+			}
+			document.getElementById("color_combina").innerHTML = enlaces;
 		}
 	</script>
     				
 			<div class="header_wrapper">
-				
-				
+			<!--	
 				<button class="header-button" onclick="verColor(1);">Leer 1</button>
 				<button class="header-button.left" onclick="verColor(2);">Leer 2</button>
+		-->
+		<h1>Color</h1>
 			</div>
 		
 			<div class="group-wrapper">
-				<h2>Color</h2>
+				
 				<div id="color">
 				<div id="color_nombre">	</div>
 				<div id="color_color"  style="width: 30px; height: 30px; background: #000;">&nbsp;</div>

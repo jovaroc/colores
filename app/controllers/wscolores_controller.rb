@@ -21,7 +21,9 @@ class WscoloresController < ApplicationController
   def unColor(nColor)
         @colores = Color.find(nColor)
       respond_to do |format|
-        format.json  { render :json => @colores.to_json(:only => [:id, :nombre, :referencia, :descripcion] ) }
+        format.json  { render :json => 
+          @colores.to_json(:only => [:id, :nombre, :referencia, :descripcion] ,
+           :include => {:combinacon => {:only => :color2, :methods => [:nombre, :referencia]} } ) }
       end
   end
 end

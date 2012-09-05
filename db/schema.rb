@@ -11,12 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120825103031) do
+ActiveRecord::Schema.define(:version => 20120905194412) do
 
   create_table "colors", :force => true do |t|
     t.string   "nombre"
     t.string   "referencia"
     t.string   "descripcion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "combinacons", :force => true do |t|
+    t.integer  "color_id"
+    t.integer  "color2"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
