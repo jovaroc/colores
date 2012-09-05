@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  color1: 1
+  color2: 1
+
+two:
+  color1: 1
+  color2: 1
