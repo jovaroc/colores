@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="description" content="iColores Web app" />
+		<meta name="author" content="Geek alpaca" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+		<link rel="apple-touch-icon" href="images/3colores_icon.png"/>
+		
+		<title>3 Colores</title>
+
+		<link rel="stylesheet" href="/stylesheets/jquery.mobile.structure-1.0.1.css" />
+		<link rel="stylesheet" href="/stylesheets/jquery.mobile-1.0.1.css" />
+		
+		<script src="/js/jquery-1.7.1.min.js"></script>
+		<script src="/js/jquery.mobile-1.0.1.js"></script>		
+		
+	</head>
+
+	<body onload="verColor(1);">
+	<script>
+		var colorActual;
+	
+		function verColor(id) {
+			
+		var ajax = new XMLHttpRequest();
+		ajax.onreadystatechange = ajaxHandlerJSON;
+		ajax.open("GET", "wscolores/color/" + id);
+		ajax.send();
+		}
+		
+		function ajaxHandlerJSON(){
+			if (!(this.readyState == this.DONE && this.status == 200)) {
+				return;
+				}
+			var input = eval("(" + this.responseText + ")");
+			colorActual = input;
+			
+			//document.getElementById("color_nombre").innerHTML = this.responseText;
+			document.getElementById("color_nombre").innerHTML = input.nombre;
+			document.getElementById("color_color").style.background = '#' + input.referencia;
+			document.getElementById("color_descripcion").innerHTML = input.descripcion;
+			var enlaces = '';
+			var colores = input.combinacon;
+			for (var i = 0; i < colores.length; i++) {
+				enlaces += '<a  href="#Color" data-inline="true" data-transition="fade" data-role="button" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-inline ui-btn-corner-all ui-shadow"onClick="verColor(' + colores[i].color2 + ');" >' 
+				enlaces += '<span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">'
+				enlaces += colores[i].color2+'</a>';
+				enlaces += '</span></span>'
+			}
+			document.getElementById("color_combina").innerHTML = enlaces;
+			
+		}
+	</script>
+    				
+    				
+	<div data-role="page" id="Color">
+     <header data-role="header"><h1>3 Colores</h1></header>
+     <section data-role="content">      
+         <div>
+				    <div id="color_nombre">	</div>
+					<div>
+						<a id="color_color" data-transition="fade"  href="#FichaColor" style="width: 150px; height: 150px;" data-role="button"></a></div>
+					
+				</div>
+     </section>
+     <footer data-role="footer" data-position="fixed"><h4>&copy; GeekAlpaca</h4></footer>
+</div>
+<div data-role="page" id="FichaColor">
+      <header data-role="header"><h1 id="color_nombre"></h1></header>
+      <section data-role="content">
+      	<a data-icon="arrow-l" data-inline="true" data-transition="fade"  href="#Color" data-role="button">Volver</a>
+				<p id="color_descripcion" data-mini="true"> </p>
+					<div id="color_combina" width="10" height="10"> </div>	
+			</section>	
+		<footer data-role="footer" data-position="fixed"><h4>&copy; GeekAlpaca</h4></footer>
+      	      
+</div>    				
+    				
+	</body>
+</html>
