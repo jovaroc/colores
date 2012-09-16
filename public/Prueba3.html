@@ -41,7 +41,6 @@ function cargarColorActual(){
 	if (!(this.readyState == this.DONE && this.status == 200)) {
 		return;
 	}
-	alert('ja');
 	var input = eval("(" + this.responseText + ")");
 	colorActual = input;
 	mostrarColorActual();
