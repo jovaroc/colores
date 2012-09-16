@@ -23,24 +23,25 @@
 
 	<body onload="verColor(1);">
     	<script>
-//alert("ja");
+//alert('ja');
 var colorActual;
 var combinados = new Array();
-var ws_url = "http://icolores.herokuapp.com/";			
-
+//var ws_url = "http://icolores.herokuapp.com/";			
+var ws_url = "/";
 
 function verColor(id) {
 
   	var ajax = new XMLHttpRequest();
 	ajax.onreadystatechange = cargarColorActual;
 	ajax.open("GET", ws_url + "wscolores/color/" + id);
-	ajax.send();
+	ajax.send()
 }
 		
 function cargarColorActual(){
 	if (!(this.readyState == this.DONE && this.status == 200)) {
 		return;
 	}
+	alert('ja');
 	var input = eval("(" + this.responseText + ")");
 	colorActual = input;
 	mostrarColorActual();

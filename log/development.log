@@ -6808,3 +6808,43 @@ Started GET "/wscolores/color/2" for 192.168.1.36 at 2012-09-09 10:41:29 +0100
   [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", "2"]]
   [1m[35mCombinacon Load (0.2ms)[0m  SELECT "combinacons".* FROM "combinacons" WHERE "combinacons"."color_id" = 2
 Completed 200 OK in 71ms (Views: 0.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/wscolores/color/1" for 127.0.0.1 at 2012-09-16 21:02:42 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCombinacon Load (0.2ms)[0m  SELECT "combinacons".* FROM "combinacons" WHERE "combinacons"."color_id" = 1
+Completed 200 OK in 229ms (Views: 0.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/wscolores/color/3" for 127.0.0.1 at 2012-09-16 21:02:46 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCombinacon Load (0.2ms)[0m  SELECT "combinacons".* FROM "combinacons" WHERE "combinacons"."color_id" = 3
+Completed 200 OK in 73ms (Views: 0.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/wscolores/color/2" for 127.0.0.1 at 2012-09-16 21:02:46 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCombinacon Load (0.3ms)[0m  SELECT "combinacons".* FROM "combinacons" WHERE "combinacons"."color_id" = 2
+Completed 200 OK in 30ms (Views: 1.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/wscolores/color/2" for 127.0.0.1 at 2012-09-16 21:02:51 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mColor Load (0.1ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mCombinacon Load (0.2ms)[0m  SELECT "combinacons".* FROM "combinacons" WHERE "combinacons"."color_id" = 2
+Completed 200 OK in 78ms (Views: 0.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wscolores/color/1" for 127.0.0.1 at 2012-09-16 21:02:55 +0100
+  Processing by WscoloresController#color as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mColor Load (0.2ms)[0m  [1mSELECT "colors".* FROM "colors" WHERE "colors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCombinacon Load (0.3ms)[0m  SELECT "combinacons".* FROM "combinacons" WHERE "combinacons"."color_id" = 1
+Completed 200 OK in 34ms (Views: 1.0ms | ActiveRecord: 1.6ms)
